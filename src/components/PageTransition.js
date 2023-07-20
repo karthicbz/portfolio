@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const PageTransitionDiv = styled.div`
-  animation-name: test;
+  animation-name: blurTransition;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-direction: normal;
@@ -12,7 +12,7 @@ const PageTransitionDiv = styled.div`
     }
 
     to {
-      filter: blur(0);
+      filter: blur(2px);
     }
   }
 `;

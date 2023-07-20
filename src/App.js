@@ -3,9 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import NameContainer from "./components/NameContainer";
 import styled from "styled-components";
-import PageTransitionDiv from "./components/PageTransition";
 
-const GridDiv = styled(PageTransitionDiv)`
+const GridDiv = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;

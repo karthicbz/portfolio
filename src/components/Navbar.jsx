@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import PageTransitionDiv from "./PageTransition";
 
-const NavBar = styled(PageTransitionDiv)`
+const NavBar = styled.div`
   /* box-sizing: border-box; */
   width: 100%;
   background-color: transparent;

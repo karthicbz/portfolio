@@ -1,11 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import PageTransitionDiv from "./PageTransition";
 
-const DIV = styled.div`
-  animation-name: blurTransition;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
+const DIV = styled(PageTransitionDiv)`
   font-family: "Ubuntu", sans-serif;
   max-width: 700px;
   margin: 0 auto;
@@ -44,16 +41,6 @@ const DIV = styled.div`
       to {
         filter: blur(1px);
       }
-    }
-  }
-
-  @keyframes blurTransition {
-    from {
-      filter: blur(8px);
-    }
-
-    to {
-      filter: blur(0);
     }
   }
 `;
