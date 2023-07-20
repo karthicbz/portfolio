@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Lottie from "lottie-react";
+import side_anim from "../assets/side_anim.json";
 
 const DIV = styled.div`
   /* height: 100%; */
@@ -32,13 +34,20 @@ const DIV = styled.div`
 
 const NameContainer = () => {
   return (
-    <DIV>
-      <p>Hello there,</p>
-      <p>
-        I am Karthick! I like creating <span className="clean">clean</span>,
-        responsive and functional web apps.
-      </p>
-    </DIV>
+    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+      <DIV>
+        <p>Hello there,</p>
+        <p>
+          I am Karthick! I like creating <span className="clean">clean</span>,
+          responsive and functional web apps.
+        </p>
+      </DIV>
+      <Lottie
+        animationData={side_anim}
+        loop={true}
+        style={{ maxWidth: "650px" }}
+      />
+    </div>
   );
 };
 
