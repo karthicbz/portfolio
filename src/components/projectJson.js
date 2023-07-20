@@ -7,7 +7,7 @@ export const projects = [
   {
     projectTitle: "Personal Blog",
     projectDescription:
-      "Front-end of the personal blog built with react, It's a full featured app which allows users to read blog posts and write comments for the post only if they login and also has a feature to delete the comment. This app also has a backend which allows me to post a blog from it, using the backend app I can unpublish the published blog, edit blog posts, view and delete comments.",
+      "Front-end of the personal blog built with react, It's a full featured app which allows users to read blog posts and write comments for the post only if they login and also has a feature to delete the comment.",
     buildWith: ["React", "Styled Components", "Javascript"],
     liveLink: "https://karthicbz.github.io/blog-frontend/",
     githubLink: "https://github.com/karthicbz/blog-frontend",

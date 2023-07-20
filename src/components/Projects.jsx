@@ -24,23 +24,23 @@ const ProjectListDiv = styled.div`
   grid-template-rows: repeat(4, 25%);
   gap: 1rem;
   margin-top: 1rem;
-  animation-name: div-flicker;
-  animation-duration: 0.1s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
 
-  &>div{
+  & > div {
     display: flex;
     gap: 2rem;
     transition: transform ease-in-out 0.5s, padding ease-in-out 0.5s;
     padding: 8px;
+    animation-name: div-flicker;
+    animation-duration: 0.1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 
-    &>.imageContainer>.project-image{
+    & > .imageContainer > .project-image {
       width: 400px;
       border-radius: 4px;
     }
 
-    &>.projectDetails>.project-title{
+    & > .projectDetails > .project-title {
       color: fuchsia;
       filter: blur(1px);
       padding-bottom: 8px;
@@ -48,67 +48,73 @@ const ProjectListDiv = styled.div`
       font-weight: 700;
     }
 
-    &>.projectDetails>.project-links{
+    & > .projectDetails > .project-links {
       display: flex;
       gap: 10px;
       padding-top: 8px;
 
-      &>a{
+      & > a {
         color: fuchsia;
+        filter: blur(2px);
       }
 
-      &>a:hover{
+      & > a:hover {
+        animation-name: div-flicker;
+        animation-duration: 0.1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
       }
     }
 
-    &>.projectDetails>p{
+    & > .projectDetails > p {
       color: green;
     }
 
-    &:hover{
+    &:hover {
       transform: scale(1.3);
       background-color: #152815;
+      animation: none;
       /* padding: 8px; */
       z-index: 5;
       /* box-shadow: 1px 1px 4px 1px black; */
     }
+
+    @keyframes div-flicker {
+      from {
+        filter: blur(2px);
+      }
+
+      50% {
+        filter: blur(0);
+      }
+
+      to {
+        filter: blur(1px);
+      }
+    }
   }
 
-  &>div:nth-child(1){
+  & > div:nth-child(1) {
     grid-column: 1/2;
     grid-row: 1/2;
   }
 
-  &>div:nth-child(2){
+  & > div:nth-child(2) {
     /* margin-top: 8px; */
     grid-column: 1/2;
     grid-row: 2/3;
   }
 
-  &>div:nth-child(3){
+  & > div:nth-child(3) {
     grid-column: 1/2;
     grid-row: 3/4;
   }
 
-  &>div:nth-child(4){
+  & > div:nth-child(4) {
     grid-column: 1/2;
     grid-row: 4/5;
   }
-
-  @keyframes div-flicker {
-    from{
-      filter: blur(2px);
-    }
-
-    50%{
-      filter: blur(0);
-    }
-
-    to{
-      filter: blur(1px);
-    }
-  }
-`
+`;
 
 const Projects = () => {
   return (
@@ -128,7 +134,11 @@ const Projects = () => {
                 </div>
               </div>
               <div className="imageContainer">
-                <img src={project.screenshot} alt="screenshot of project" className="project-image"/>
+                <img
+                  src={project.screenshot}
+                  alt="screenshot of project"
+                  className="project-image"
+                />
               </div>
             </div>
           );
