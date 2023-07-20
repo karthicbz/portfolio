@@ -3,3 +3,16 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #152815;
+}
+
+#root {
+  height: 100%;
+}

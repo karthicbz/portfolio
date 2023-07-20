@@ -8,5 +8,13 @@ const Router = () => {
       path: "/",
       element: <App />,
     },
+    {
+      path: "/:currPath",
+      element: <App />,
+    },
   ]);
+
+  return <RouterProvider router={router} />;
 };
+
+export default Router;
