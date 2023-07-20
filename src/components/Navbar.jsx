@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 const NavBar = styled.div`
   /* box-sizing: border-box; */
   width: 100%;
-  background-color: #cdffd6;
+  background-color: transparent;
   display: grid;
   grid-column: 1/2;
   grid-row: 1/2;
+  filter: blur(1px);
 
   & > ul {
     display: flex;
@@ -24,9 +25,10 @@ const NavBar = styled.div`
   & > ul > li {
     padding: 8px;
     border: 2px solid transparent;
+    filter: blur(2px);
 
     & > a {
-      color: #152815;
+      color: fuchsia;
       text-decoration: none;
     }
   }
@@ -34,6 +36,7 @@ const NavBar = styled.div`
   & > ul > li:hover {
     border-bottom-color: #48a85a;
     cursor: pointer;
+    filter: blur(1px);
   }
 `;
 
@@ -53,7 +56,6 @@ const Navbar = () => {
         <li>
           <Link to="/Resume">Resume</Link>
         </li>
-        <li>mode</li>
       </ul>
     </NavBar>
   );

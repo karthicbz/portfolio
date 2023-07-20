@@ -35,8 +35,8 @@ const NameContainer = () => {
     <DIV>
       <p>Hello there,</p>
       <p>
-        I am Karthick! I like creating clean, responsive and functional web
-        apps.
+        I am Karthick! I like creating <span className="clean">clean</span>,
+        responsive and functional web apps.
       </p>
     </DIV>
   );
