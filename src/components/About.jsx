@@ -9,10 +9,6 @@ const DIV = styled(PageTransitionDiv)`
   grid-column: 1/2;
   grid-row: 2/3;
 
-  & > p {
-    /* text-align: center; */
-  }
-
   & > .about-me-head {
     font-size: 3rem;
     font-weight: 700;
