@@ -14,6 +14,7 @@ const Div = styled(PageTransitionDiv)`
     font-size: 3rem;
     font-weight: 700;
     color: fuchsia;
+    filter: blur(2px);
   }
 `;
 
@@ -23,13 +24,53 @@ const ProjectListDiv = styled.div`
   grid-template-rows: repeat(4, 25%);
   gap: 1rem;
   margin-top: 1rem;
+  animation-name: div-flicker;
+  animation-duration: 0.1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 
   &>div{
     display: flex;
     gap: 2rem;
-    /* justify-content: center; */
+    transition: transform ease-in-out 0.5s, padding ease-in-out 0.5s;
+    padding: 8px;
+
     &>.imageContainer>.project-image{
       width: 400px;
+      border-radius: 4px;
+    }
+
+    &>.projectDetails>.project-title{
+      color: fuchsia;
+      filter: blur(1px);
+      padding-bottom: 8px;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    &>.projectDetails>.project-links{
+      display: flex;
+      gap: 10px;
+      padding-top: 8px;
+
+      &>a{
+        color: fuchsia;
+      }
+
+      &>a:hover{
+      }
+    }
+
+    &>.projectDetails>p{
+      color: green;
+    }
+
+    &:hover{
+      transform: scale(1.3);
+      background-color: #152815;
+      /* padding: 8px; */
+      z-index: 5;
+      /* box-shadow: 1px 1px 4px 1px black; */
     }
   }
 
@@ -39,6 +80,7 @@ const ProjectListDiv = styled.div`
   }
 
   &>div:nth-child(2){
+    /* margin-top: 8px; */
     grid-column: 1/2;
     grid-row: 2/3;
   }
@@ -52,6 +94,20 @@ const ProjectListDiv = styled.div`
     grid-column: 1/2;
     grid-row: 4/5;
   }
+
+  @keyframes div-flicker {
+    from{
+      filter: blur(2px);
+    }
+
+    50%{
+      filter: blur(0);
+    }
+
+    to{
+      filter: blur(1px);
+    }
+  }
 `
 
 const Projects = () => {
@@ -63,11 +119,13 @@ const Projects = () => {
           return (
             <div key={project.projectTitle}>
               <div className="projectDetails">
-                <p>{project.projectTitle}</p>
+                <p className="project-title">{project.projectTitle}</p>
                 <p>{project.projectDescription}</p>
                 <p>{project.buildWith.join("")}</p>
-                <a href={project.githubLink}>Github</a>
-                <a href={project.liveLink}>Live</a>
+                <div className="project-links">
+                  <a href={project.githubLink}>Github</a>
+                  <a href={project.liveLink}>Live</a>
+                </div>
               </div>
               <div className="imageContainer">
                 <img src={project.screenshot} alt="screenshot of project" className="project-image"/>
