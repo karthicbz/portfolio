@@ -56,6 +56,7 @@ const ProjectListDiv = styled.div`
       & > a {
         color: fuchsia;
         filter: blur(2px);
+        text-decoration: none;
       }
 
       & > a:hover {
@@ -63,6 +64,7 @@ const ProjectListDiv = styled.div`
         animation-duration: 0.1s;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+        text-decoration: underline;
       }
     }
 
@@ -71,7 +73,7 @@ const ProjectListDiv = styled.div`
     }
 
     &:hover {
-      transform: scale(1.3);
+      transform: scale(1.1);
       background-color: #152815;
       animation: none;
       /* padding: 8px; */
@@ -127,7 +129,9 @@ const Projects = () => {
               <div className="projectDetails">
                 <p className="project-title">{project.projectTitle}</p>
                 <p>{project.projectDescription}</p>
-                <p>{project.buildWith.join("")}</p>
+                <p style={{ fontFamily: "Ubuntu Mono", marginTop: "8px" }}>
+                  Build with: {project.buildWith.join(", ")}
+                </p>
                 <div className="project-links">
                   <a href={project.githubLink}>Github</a>
                   <a href={project.liveLink}>Live</a>
