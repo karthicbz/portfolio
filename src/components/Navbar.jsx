@@ -10,6 +10,7 @@ const NavBar = styled.div`
   grid-column: 1/2;
   grid-row: 1/2;
   filter: blur(1px);
+  position: fixed;
 
   & > ul {
     display: flex;

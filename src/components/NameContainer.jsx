@@ -5,20 +5,16 @@ import side_anim from "../assets/side_anim.json";
 import PageTransitionDiv from "./PageTransition";
 
 const DIV = styled(PageTransitionDiv)`
-  /* height: 100%; */
   background-color: transparent;
   font-family: "Ubuntu", sans-serif;
   max-width: 700px;
   padding: 1rem;
   border-radius: 10px;
-  grid-column: 1/2;
-  grid-row: 2/3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 15rem 0 15rem 5rem;
   gap: 10px;
-  /* filter: blur(2px); */
 
   & > p:first-child {
     font-size: 5rem;
@@ -35,9 +31,16 @@ const DIV = styled(PageTransitionDiv)`
   }
 `;
 
+const GridDiv = styled.div`
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-evenly;
+`;
+
 const NameContainer = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+    <GridDiv>
       <DIV>
         <p>Hello there,</p>
         <p>
@@ -50,7 +53,7 @@ const NameContainer = () => {
         loop={true}
         style={{ maxWidth: "650px" }}
       />
-    </div>
+    </GridDiv>
   );
 };
 

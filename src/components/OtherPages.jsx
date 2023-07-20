@@ -4,11 +4,12 @@ import Projects from "./Projects";
 import Navbar from "./Navbar";
 import ErrorPage from "./ErrorPage";
 import { useParams } from "react-router-dom";
+import { GridDiv } from "../App";
 
 const OtherPages = () => {
   const { currPath } = useParams();
   return (
-    <div>
+    <GridDiv>
       <Navbar />
       {currPath === "about" ? (
         <About />
@@ -17,7 +18,7 @@ const OtherPages = () => {
       ) : (
         <ErrorPage />
       )}
-    </div>
+    </GridDiv>
   );
 };
 

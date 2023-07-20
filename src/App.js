@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import NameContainer from "./components/NameContainer";
 import styled from "styled-components";
 
-const GridDiv = styled.div`
+export const GridDiv = styled.div`
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
