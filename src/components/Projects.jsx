@@ -1,6 +1,7 @@
 import React from "react";
 import PageTransitionDiv from "./PageTransition";
 import styled from "styled-components";
+import { projects } from "./projectJson";
 
 const Div = styled(PageTransitionDiv)`
   grid-column: 1/2;
@@ -19,24 +20,22 @@ const Projects = () => {
     <Div>
       <p className="projects-head">Projects</p>
       <div>
-        <div>
-          <div className="projectDetails">
-            <p></p>
-          </div>
-          <div className="projectImg"></div>
-        </div>
-        <div>
-          <div className="projectDetails"></div>
-          <div className="projectImg"></div>
-        </div>
-        <div>
-          <div className="projectDetails"></div>
-          <div className="projectImg"></div>
-        </div>
-        <div>
-          <div className="projectDetails"></div>
-          <div className="projectImg"></div>
-        </div>
+        {projects.map((project) => {
+          return (
+            <div key={project.projectTitle}>
+              <div className="projectDetails">
+                <p>{project.projectTitle}</p>
+                <p>{project.projectDescription}</p>
+                <p>{project.buildWith.join("")}</p>
+                <a href={project.githubLink}>Github</a>
+                <a href={project.liveLink}>Live</a>
+              </div>
+              <div>
+                <img src={project.screenshot} alt="screenshot of project" />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </Div>
   );
