@@ -36,7 +36,24 @@ const NavBar = styled.div`
   & > ul > li:hover {
     border-bottom-color: #48a85a;
     cursor: pointer;
-    filter: blur(1px);
+    animation-name: flick;
+    animation-duration: 0.1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+    @keyframes flick {
+      from {
+        filter: blur(2px);
+      }
+
+      50% {
+        filter: blur(0);
+      }
+
+      to {
+        filter: blur(1px);
+      }
+    }
   }
 `;
 
