@@ -1,6 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "../App";
+import OtherPages from "./OtherPages";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -10,7 +11,7 @@ const Router = () => {
     },
     {
       path: "/:currPath",
-      element: <App />,
+      element: <OtherPages />,
     },
   ]);
 
