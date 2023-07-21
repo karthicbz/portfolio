@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.10545088.css",
-    "main.js": "/portfolio/static/js/main.94e9db02.js",
-    "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/memorygame.png": "/portfolio/static/media/memorygame.caf6a94709d0ffa29238.png",
-    "static/media/insta.png": "/portfolio/static/media/insta.5dfed44d627b44460f29.png",
-    "static/media/waldo.png": "/portfolio/static/media/waldo.843f201c863478165274.png",
-    "static/media/blog.png": "/portfolio/static/media/blog.5d3cefad57300297b166.png",
-    "index.html": "/portfolio/index.html",
-    "main.10545088.css.map": "/portfolio/static/css/main.10545088.css.map",
-    "main.94e9db02.js.map": "/portfolio/static/js/main.94e9db02.js.map",
-    "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
+    "main.css": "/static/css/main.10545088.css",
+    "main.js": "/static/js/main.77ab896c.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/memorygame.png": "/static/media/memorygame.caf6a94709d0ffa29238.png",
+    "static/media/insta.png": "/static/media/insta.5dfed44d627b44460f29.png",
+    "static/media/waldo.png": "/static/media/waldo.843f201c863478165274.png",
+    "static/media/blog.png": "/static/media/blog.5d3cefad57300297b166.png",
+    "index.html": "/index.html",
+    "main.10545088.css.map": "/static/css/main.10545088.css.map",
+    "main.77ab896c.js.map": "/static/js/main.77ab896c.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.10545088.css",
-    "static/js/main.94e9db02.js"
+    "static/js/main.77ab896c.js"
   ]
 }
