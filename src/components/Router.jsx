@@ -1,21 +1,17 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import App from "../App";
 import OtherPages from "./OtherPages";
 
 const Router = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <App />,
-    },
-    {
-      path: "/:currPath",
-      element: <OtherPages />,
-    },
-  ]);
-
-  return <RouterProvider router={router} />;
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/:currPath" element={<OtherPages />} />
+      </Routes>
+    </HashRouter>
+  );
 };
 
 export default Router;
