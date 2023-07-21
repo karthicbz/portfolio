@@ -13,7 +13,7 @@ const DIV = styled(PageTransitionDiv)`
     font-size: 3rem;
     font-weight: 700;
     color: fuchsia;
-    text-align: center;
+    text-align: left;
     filter: blur(2px);
   }
 
@@ -48,32 +48,32 @@ const About = () => {
     <DIV>
       <p className="about-me-head">About me</p>
       <p className="about-me-para">
-        I am having an affection with computers sice my childhood and got
-        inspired by lot of great opensource apps. so I wanted to wet my feet
+        I have had an affection for computers since my childhood and got
+        inspired by a lot of great open source apps. so I wanted to wet my feet
         with programming and it was the year 2016 i started learning
-        programming. My first programming language was python learned in
-        codecademy. I learned basics but i don't know how to proceed further
+        programming. My first programming language was python, learned in
+        codecademy. I learned the basics but I don't know how to proceed further
         with python. However, made some small hobby projects in python and
         pushed into github (don't know how to use git so i basically copy and
         pasted into git).
         <br />
-        <br /> Inbetween learned some java and learned c# through Head first c#
+        <br /> In Between learned some java and learned c# through Head first c#
         book. That was really a nice book which helped me to understand oop
-        principles and It was the year 2018 I found the odinproject website. It
+        principles and It was the year 2018 I found the odin project website. It
         is the website to learn full stack web development with lot of rich
-        content. I started learning web development however due to some issue i
+        content. I started learning web development however due to some issues I
         dropped that course.
         <br />
         <br /> After three years I really wanted to change my career. So again I
         took the full stack development course from the odin project. This time
-        there is a lot of change in the website. I learned new concepts in
-        webdevelopment and started enjoying webdevelopment. one of the benefit i
-        liked about webdevelopment is I can show my work to other person easily.
-        I have completed all the projects and learned a lot of stuffs and still
-        learning.
+        there are a lot of changes in the website. I learned new concepts in web
+        development and started enjoying web development. One of the benefits I
+        liked about web development is that I can show my work to other people
+        easily. I have completed all the projects and learned a lot of stuff and
+        am still learning.
         <br />
         <br />
-        Aside from that I like to read about stuffs which will blow my mind. I
+        Aside from that I like to read about stuff which will blow my mind. I
         use reddit mostly. Currently I continue studying (always!) and look
         forward to join a proactive, innovative team filled with empathic people
         where I can continue growing both personally and professionally.{" "}
