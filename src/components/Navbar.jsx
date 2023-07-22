@@ -73,7 +73,13 @@ const Navbar = () => {
           <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="mailto:pkarthicbz@gmail.com">Contact</Link>
+          <Link
+            to="mailto:pkarthicbz@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </NavBar>

@@ -153,8 +153,20 @@ const Projects = () => {
                   Build with: {project.buildWith.join(", ")}
                 </p>
                 <div className="project-links">
-                  <a href={project.githubLink}>Github</a>
-                  <a href={project.liveLink}>Live</a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href={project.liveLink}
+                    target="_black"
+                    rel="noopener noreferrer"
+                  >
+                    Live
+                  </a>
                 </div>
               </div>
               <div className="imageContainer">

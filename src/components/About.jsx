@@ -51,7 +51,6 @@ const DIV = styled(PageTransitionDiv)`
     & > .about-me-para {
       font-size: 1.1rem;
       padding: 8px 8px 8px 16px;
-      overflow-x: scroll;
     }
   }
 `;
