@@ -32,6 +32,24 @@ const DIV = styled(PageTransitionDiv)`
   }
 
   @media screen and (max-width: 414px) {
+    position: absolute;
+    left: 0;
+    bottom: 250px;
+    right: 0;
+    z-index: 1;
+    margin: 0;
+
+    & > p:nth-child(1) {
+      text-align: left;
+      font-size: 3.5rem;
+      filter: blur(1px);
+    }
+
+    & > p:nth-child(2) {
+      text-align: left;
+      font-size: 1.5rem;
+      filter: blur(1.5px);
+    }
   }
 `;
 
@@ -40,6 +58,16 @@ const GridDiv = styled.div`
   grid-row: 2/3;
   display: flex;
   justify-content: space-evenly;
+
+  @media screen and (max-width: 414px) {
+    position: relative;
+    height: 100%;
+
+    & > .lottie {
+      position: absolute;
+      bottom: 0;
+    }
+  }
 `;
 
 const NameContainer = () => {
