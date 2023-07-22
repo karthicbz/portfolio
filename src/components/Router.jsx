@@ -6,7 +6,7 @@ import OtherPages from "./OtherPages";
 import SwipeView from "./SwipeView";
 
 const Router = () => {
-  return window.screen.width <= 415 ? (
+  return window.screen.width <= 414 ? (
     <SwipeView />
   ) : (
     <HashRouter>

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Lottie from "lottie-react";
 import side_anim from "../assets/side_anim.json";
 import PageTransitionDiv from "./PageTransition";
+import square_anim from "../assets/pink_green_squares.json";
 
 const DIV = styled(PageTransitionDiv)`
   background-color: transparent;
@@ -51,9 +52,10 @@ const NameContainer = () => {
           functional web apps.
         </p>
       </DIV>
+
       <Lottie
         className="lottie"
-        animationData={side_anim}
+        animationData={window.screen.width <= 414 ? square_anim : side_anim}
         loop={true}
         style={{ maxWidth: "650px" }}
       />
