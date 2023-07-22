@@ -73,7 +73,7 @@ const Navbar = () => {
           <Link to="/projects">Projects</Link>
         </li>
         <li>
-          <Link to="/Resume">Resume</Link>
+          <Link to="mailto:pkarthicbz@gmail.com">Contact</Link>
         </li>
       </ul>
     </NavBar>

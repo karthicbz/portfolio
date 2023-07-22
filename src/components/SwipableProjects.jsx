@@ -84,6 +84,7 @@ const Div = styled.div`
         height: 100%;
         justify-content: center;
         align-items: center;
+        padding-bottom: 53px;
         font-size: 2rem;
         font-weight: 700;
         color: fuchsia;

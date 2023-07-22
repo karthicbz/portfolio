@@ -31,6 +31,23 @@ const DIV = styled(PageTransitionDiv)`
     filter: blur(2px);
   }
 
+  & > p:nth-child(2) {
+    animation-name: beat-anime;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  @keyframes beat-anime {
+    from {
+      filter: blur(2px);
+    }
+
+    to {
+      filter: blur(0.5px);
+    }
+  }
+
   @media screen and (max-width: 414px) {
     position: absolute;
     left: 0;
@@ -49,6 +66,11 @@ const DIV = styled(PageTransitionDiv)`
       text-align: left;
       font-size: 1.5rem;
       filter: blur(1.5px);
+
+      animation-name: beat-anime;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
     }
   }
 `;
