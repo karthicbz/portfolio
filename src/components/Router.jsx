@@ -2,9 +2,13 @@ import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import App from "../App";
 import OtherPages from "./OtherPages";
+// import ErrorPage from "./ErrorPage";
+import SwipeView from "./SwipeView";
 
 const Router = () => {
-  return (
+  return window.screen.width <= 415 ? (
+    <SwipeView />
+  ) : (
     <HashRouter>
       <Routes>
         <Route path="/" element={<App />} />

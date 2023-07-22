@@ -41,6 +41,18 @@ const DIV = styled(PageTransitionDiv)`
       }
     }
   }
+
+  @media screen and (max-width: 414px) {
+    & > .about-me-head {
+      font-size: 2rem;
+      padding: 8px 0px 8px 16px;
+    }
+
+    & > .about-me-para {
+      font-size: 1.1rem;
+      padding: 8px 8px 8px 16px;
+    }
+  }
 `;
 
 const About = () => {

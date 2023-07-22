@@ -29,6 +29,9 @@ const DIV = styled(PageTransitionDiv)`
     color: green;
     filter: blur(2px);
   }
+
+  @media screen and (max-width: 414px) {
+  }
 `;
 
 const GridDiv = styled.div`
@@ -49,6 +52,7 @@ const NameContainer = () => {
         </p>
       </DIV>
       <Lottie
+        className="lottie"
         animationData={side_anim}
         loop={true}
         style={{ maxWidth: "650px" }}
