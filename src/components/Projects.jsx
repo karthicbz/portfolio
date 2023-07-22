@@ -16,12 +16,31 @@ const Div = styled(PageTransitionDiv)`
     color: fuchsia;
     filter: blur(2px);
   }
+
+  & > .more-projects {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+
+    & > a {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: fuchsia;
+      text-decoration: none;
+      filter: blur(2px);
+    }
+
+    & > a:hover {
+      filter: blur(1px);
+      text-decoration: underline;
+    }
+  }
 `;
 
 const ProjectListDiv = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 25%);
+  grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 
@@ -148,6 +167,9 @@ const Projects = () => {
           );
         })}
       </ProjectListDiv>
+      <div className="more-projects">
+        <a href="https://github.com/karthicbz">More projects</a>
+      </div>
     </Div>
   );
 };
