@@ -2,6 +2,7 @@ import React from "react";
 import PageTransitionDiv from "./PageTransition";
 import styled from "styled-components";
 import { projects } from "./projectJson";
+import "../App.css";
 
 const Div = styled(PageTransitionDiv)`
   grid-column: 1/2;

@@ -1,5 +1,6 @@
 import NameContainer from "./NameContainer";
-import Projects from "./Projects";
+// import Projects from "./Projects";
+import SwipableProjects from "./SwipableProjects";
 import About from "./About";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,7 +20,7 @@ const SwipeView = () => {
           <About />
         </SwiperSlide>
         <SwiperSlide>
-          <Projects />
+          <SwipableProjects />
         </SwiperSlide>
       </Swiper>
     </>
