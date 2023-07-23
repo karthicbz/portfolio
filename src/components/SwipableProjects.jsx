@@ -136,8 +136,20 @@ const SwipableProjects = () => {
                   Build with: {project.buildWith.join(", ")}
                 </p>
                 <div className="project-links">
-                  <a href={project.githubLink}>Github</a>
-                  <a href={project.liveLink}>Live</a>
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Live
+                  </a>
                 </div>
               </div>
               <div className="imageContainer">
@@ -152,7 +164,13 @@ const SwipableProjects = () => {
         })}
         <SwiperSlide>
           <div className="more-projects">
-            <a href="https://github.com/karthicbz">More projects</a>
+            <a
+              href="https://github.com/karthicbz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              More projects
+            </a>
           </div>
         </SwiperSlide>
       </Swiper>

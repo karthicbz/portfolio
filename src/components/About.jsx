@@ -56,7 +56,7 @@ const DIV = styled(PageTransitionDiv)`
     }
 
     & > .mySwiper > div > .swiper-slide > .about-me-para {
-      font-size: 18px;
+      font-size: 1.3rem;
       padding: 8px 8px 8px 16px;
       text-align: left;
       color: green;

@@ -181,7 +181,13 @@ const Projects = () => {
         })}
       </ProjectListDiv>
       <div className="more-projects">
-        <a href="https://github.com/karthicbz">More projects</a>
+        <a
+          href="https://github.com/karthicbz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          More projects
+        </a>
       </div>
     </Div>
   );
