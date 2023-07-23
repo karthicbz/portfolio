@@ -4,8 +4,8 @@ import SwipableProjects from "./SwipableProjects";
 import About from "./About";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
-import "swiper/css/pagination";
 import SwipableContact from "./SwipableContact";
 
 import "../App.css";
@@ -13,11 +13,11 @@ import "../App.css";
 const SwipeView = () => {
   return (
     <>
-      <Swiper direction={"vertical"} className="mySwiper">
+      <Swiper direction={"vertical"} className="mySwiper" scrollbar={true}>
         <SwiperSlide>
           <NameContainer />
         </SwiperSlide>
-        <SwiperSlide style={{ overflow: "auto" }}>
+        <SwiperSlide>
           <About />
         </SwiperSlide>
         <SwiperSlide>

@@ -4,13 +4,19 @@ import Lottie from "lottie-react";
 import styled from "styled-components";
 
 const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   font-family: "Ubuntu", sans-serif;
   height: 100vh;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 20% repeat(2, 40%);
+
+  & > p {
+    text-align: left;
+    padding: 8px 0px 8px 16px;
+    font-size: 2rem;
+    color: fuchsia;
+    font-weight: 700;
+    filter: blur(2px);
+  }
 
   & > .lottie {
     max-width: 450px;
@@ -43,6 +49,7 @@ const Div = styled.div`
 const SwipableContact = () => {
   return (
     <Div>
+      <p>Contact</p>
       <Lottie className="lottie" animationData={ContactAnim} loop={true} />
       <div>
         <a

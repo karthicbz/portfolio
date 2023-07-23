@@ -1,6 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import PageTransitionDiv from "./PageTransition";
+import { aboutText } from "./aboutText";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Pagination } from "swiper/modules";
 
 const DIV = styled(PageTransitionDiv)`
   font-family: "Ubuntu", sans-serif;
@@ -22,7 +29,7 @@ const DIV = styled(PageTransitionDiv)`
     font-size: 1.5rem;
     color: green;
     animation: para-flicker;
-    animation-duration: 0.1s;
+    animation-duration: 0.2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     text-align: left;
@@ -48,9 +55,38 @@ const DIV = styled(PageTransitionDiv)`
       padding: 8px 0px 8px 16px;
     }
 
-    & > .about-me-para {
-      font-size: 1.1rem;
+    & > .mySwiper > div > .swiper-slide > .about-me-para {
+      font-size: 18px;
       padding: 8px 8px 8px 16px;
+      text-align: left;
+      color: green;
+      height: 100vh;
+      animation-name: para-flicker;
+      animation-duration: 0.2s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+
+    & > .mySwiper > .swiper-pagination {
+      position: fixed;
+      bottom: 10px;
+      & > .swiper-pagination-bullet-active {
+        background-color: fuchsia;
+      }
+    }
+
+    @keyframes para-flicker {
+      from {
+        filter: blur(2px);
+      }
+
+      50% {
+        filter: blur(0.5px);
+      }
+
+      to {
+        filter: blur(1px);
+      }
     }
   }
 `;
@@ -59,37 +95,27 @@ const About = () => {
   return (
     <DIV>
       <p className="about-me-head">About me</p>
-      <p className="about-me-para">
-        I have had an affection for computers since my childhood and got
-        inspired by a lot of great open source apps. so I wanted to wet my feet
-        with programming and it was the year 2016 i started learning
-        programming. My first programming language was python, learned in
-        codecademy. I learned the basics but I don't know how to proceed further
-        with python. However, made some small hobby projects in python and
-        pushed into github (don't know how to use git so i basically copy and
-        pasted into git).
-        <br />
-        <br /> In Between learned some java and learned c# through Head first c#
-        book. That was really a nice book which helped me to understand oop
-        principles and It was the year 2018 I found the odin project website. It
-        is the website to learn full stack web development with lot of rich
-        content. I started learning web development however due to some issues I
-        dropped that course.
-        <br />
-        <br /> After three years I really wanted to change my career. So again I
-        took the full stack development course from the odin project. This time
-        there are a lot of changes in the website. I learned new concepts in web
-        development and started enjoying web development. One of the benefits I
-        liked about web development is that I can show my work to other people
-        easily. I have completed all the projects and learned a lot of stuff and
-        am still learning.
-        <br />
-        <br />
-        Aside from that I like to read about stuff which will blow my mind. I
-        use reddit mostly. Currently I continue studying (always!) and look
-        forward to join a proactive, innovative team filled with empathic people
-        where I can continue growing both personally and professionally.{" "}
-      </p>
+      {window.screen.width <= 414 ? (
+        <Swiper className="mySwiper" pagination={true} modules={[Pagination]}>
+          {aboutText.map((about) => {
+            return (
+              <SwiperSlide className="swiper-slide" key={about.id}>
+                <p className="about-me-para">{about.text}</p>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      ) : (
+        aboutText.map((about) => {
+          return (
+            <p key={about.id} className="about-me-para">
+              {about.text}
+              <br></br>
+              {/* <br></br> */}
+            </p>
+          );
+        })
+      )}
     </DIV>
   );
 };
