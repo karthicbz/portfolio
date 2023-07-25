@@ -107,7 +107,7 @@ const NameContainer = () => {
         className="lottie"
         animationData={window.screen.width <= 414 ? square_anim : side_anim}
         loop={true}
-        style={{ maxWidth: "650px" }}
+        style={{ maxWidth: "650px", width: "650px" }}
       />
     </GridDiv>
   );
